@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿
+/*
+ Mid Term Test
+ By: Siying Li
+ Student ID: 301054781
+ Last Modified by: Siying Li
+ 2019-10-19
+ Description: GameController for level 1
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -50,21 +59,17 @@ public class GameController : MonoBehaviour
         set
         {
             _lives = value;
-            if(_lives < 1)
+            if (_lives < 1)
             {
                 SceneManager.LoadScene("End");
             }
             else
             {
-                if(playerLives.GetComponent<LivesCount>().Lives > _lives)
-                {
-                    Debug.Log("Lives Update");
-                    playerLives.GetComponent<LivesCount>().Lives = _lives;
-                }
+                playerLives.GetComponent<LivesCount>().Lives = _lives;              
 
                 livesLabel.text = "Lives: " + _lives.ToString();
             }
-           
+
         }
     }
 
@@ -79,7 +84,7 @@ public class GameController : MonoBehaviour
         {
             _score = value;
 
-            
+
             if (highScore.GetComponent<HighScore>().score < _score)
             {
                 highScore.GetComponent<HighScore>().score = _score;
@@ -91,6 +96,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        highScore = GameObject.Find("HighScore");
+        playerLives = GameObject.Find("PlayerLives");
         GameObjectInitialization();
         SceneConfiguration();
     }
@@ -134,10 +141,10 @@ public class GameController : MonoBehaviour
                 endLabel.SetActive(false);
                 restartButton.SetActive(false);
                 activeSoundClip = SoundClip.ENGINE;
-                _score = highScore.GetComponent<HighScore>().score;
-                _lives = playerLives.GetComponent<LivesCount>().Lives;
+                Score = highScore.GetComponent<HighScore>().score;
+                Lives = playerLives.GetComponent<LivesCount>().Lives;
                 scoreLabel.text = "Score: " + highScore.GetComponent<HighScore>().score.ToString();
-                livesLabel.text = "Lives: " +playerLives.GetComponent<LivesCount>().Lives.ToString();
+                livesLabel.text = "Lives: " + playerLives.GetComponent<LivesCount>().Lives.ToString();
                 break;
             case "End":
                 scoreLabel.enabled = false;
@@ -148,13 +155,13 @@ public class GameController : MonoBehaviour
                 highScoreLabel.text = "High Score: " + highScore.GetComponent<HighScore>().score;
                 break;
         }
-        if(isLevel2 == false)
+        if (isLevel2 == false)
         {
             Lives = 5;
             Score = 0;
         }
-        
-        
+
+
 
 
         if ((activeSoundClip != SoundClip.NONE) && (activeSoundClip != SoundClip.NUM_OF_CLIPS))
@@ -182,7 +189,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Score >= 500 && isLevel2 == false)
+        if (Score >= 100 && isLevel2 == false)
         {
             DontDestroyOnLoad(highScore);
             DontDestroyOnLoad(playerLives);

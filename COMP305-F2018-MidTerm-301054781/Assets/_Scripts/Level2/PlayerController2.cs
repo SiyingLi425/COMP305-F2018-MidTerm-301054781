@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+ Mid Term Test
+ By: Siying Li
+ Student ID: 301054781
+ Last Modified by: Siying Li
+ 2019-10-19
+ Description: Player controller for Level 2
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Util;
@@ -67,6 +75,7 @@ public class PlayerController2 : MonoBehaviour
             case "Cloud":
                 _thunderSound.Play();
                 gameController.Lives -= 1;
+                Debug.Log("Hit");
                 break;
             case "Island":
                 _yaySound.Play();

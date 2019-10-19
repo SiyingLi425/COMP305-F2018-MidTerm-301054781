@@ -47,7 +47,7 @@ public class OceanController : MonoBehaviour
     /// </summary>
     void CheckBounds()
     {
-        if (transform.position.y <= resetPoint)
+        if(transform.position.y <= resetPoint)
         {
             Reset();
         }

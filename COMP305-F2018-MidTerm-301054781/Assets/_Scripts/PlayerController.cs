@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+ Mid Term Test
+ By: Siying Li
+ Student ID: 301054781
+ Last Modified by: Siying Li
+ 2019-10-19
+ Description: Player controller for level 1
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Util;
@@ -32,7 +40,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 newPosition = transform.position;
 
-        if (Input.GetAxis("Horizontal") > 0.0f)
+        if(Input.GetAxis("Horizontal") > 0.0f)
         {
             newPosition += new Vector2(speed.max, 0.0f);
         }
@@ -48,7 +56,7 @@ public class PlayerController : MonoBehaviour
     public void CheckBounds()
     {
         // check right boundary
-        if (transform.position.x > boundary.Right)
+        if(transform.position.x > boundary.Right)
         {
             transform.position = new Vector2(boundary.Right, transform.position.y);
         }
@@ -62,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        switch (other.gameObject.tag)
+        switch(other.gameObject.tag)
         {
             case "Cloud":
                 _thunderSound.Play();
@@ -76,4 +84,3 @@ public class PlayerController : MonoBehaviour
     }
 
 }
-

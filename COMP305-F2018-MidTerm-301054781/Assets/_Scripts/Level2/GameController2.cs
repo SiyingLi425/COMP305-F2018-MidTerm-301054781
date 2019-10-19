@@ -1,10 +1,19 @@
-﻿using System.Collections;
+﻿/*
+ Mid Term Test
+ By: Siying Li
+ Student ID: 301054781
+ Last Modified by: Siying Li
+ 2019-10-19
+ Description: GameController for level 2
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+public class GameController2 : MonoBehaviour
 {
     [Header("Scene Game Objects")]
     public GameObject cloud;
@@ -52,7 +61,9 @@ public class GameController : MonoBehaviour
             _lives = value;
             if (_lives < 1)
             {
+                Debug.Log(_lives);
                 SceneManager.LoadScene("End");
+
             }
             else
             {
@@ -134,10 +145,11 @@ public class GameController : MonoBehaviour
                 endLabel.SetActive(false);
                 restartButton.SetActive(false);
                 activeSoundClip = SoundClip.ENGINE;
-                _score = highScore.GetComponent<HighScore>().score;
-                _lives = playerLives.GetComponent<LivesCount>().Lives;
+                Score = highScore.GetComponent<HighScore>().score;
+                Lives = playerLives.GetComponent<LivesCount>().Lives;
                 scoreLabel.text = "Score: " + highScore.GetComponent<HighScore>().score.ToString();
                 livesLabel.text = "Lives: " + playerLives.GetComponent<LivesCount>().Lives.ToString();
+                Debug.Log(_lives);
                 break;
             case "End":
                 scoreLabel.enabled = false;
@@ -182,7 +194,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Score >= 100 && isLevel2 == false)
+        if (Score >= 500 && isLevel2 == false)
         {
             DontDestroyOnLoad(highScore);
             DontDestroyOnLoad(playerLives);
@@ -203,3 +215,4 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 }
+

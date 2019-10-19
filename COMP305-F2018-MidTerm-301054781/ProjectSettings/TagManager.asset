@@ -7,7 +7,6 @@ TagManager:
   - Cloud
   - Island
   - Ocean
-  - PlayerLive
   layers:
   - Default
   - TransparentFX

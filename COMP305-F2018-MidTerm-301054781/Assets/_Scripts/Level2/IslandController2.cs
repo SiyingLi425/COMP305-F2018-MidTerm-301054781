@@ -1,17 +1,28 @@
-﻿using System.Collections;
+﻿
+/*
+ Mid Term Test
+ By: Siying Li
+ Student ID: 301054781
+ Last Modified by: Siying Li
+ 2019-10-19
+ Description: Island Controller for level 2
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Util;
 
-public class OceanController : MonoBehaviour
+public class IslandController2 : MonoBehaviour
 {
-    public float verticalSpeed = 0.1f;
-    public float resetPosition = 4.8f;
-    public float resetPoint = -4.8f;
+    public float horizontalSpeed = 0.05f;
+
+
+    public Boundary boundary;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Reset();
+        Reset();
     }
 
     // Update is called once per frame
@@ -26,7 +37,7 @@ public class OceanController : MonoBehaviour
     /// </summary>
     void Move()
     {
-        Vector2 newPosition = new Vector2(0.0f, verticalSpeed);
+        Vector2 newPosition = new Vector2(horizontalSpeed, 0.0f);
         Vector2 currentPosition = transform.position;
 
         currentPosition -= newPosition;
@@ -38,7 +49,8 @@ public class OceanController : MonoBehaviour
     /// </summary>
     void Reset()
     {
-        transform.position = new Vector2(0.0f, resetPosition);
+        float randomYPosition = Random.Range(boundary.Top, boundary.Bottom);
+        transform.position = new Vector2(boundary.Right, randomYPosition);
     }
 
     /// <summary>
@@ -47,7 +59,7 @@ public class OceanController : MonoBehaviour
     /// </summary>
     void CheckBounds()
     {
-        if(transform.position.y <= resetPoint)
+        if (transform.position.x <= boundary.Left)
         {
             Reset();
         }

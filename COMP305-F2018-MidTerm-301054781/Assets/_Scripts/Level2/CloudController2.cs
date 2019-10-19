@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+ Mid Term Test
+ By: Siying Li
+ Student ID: 301054781
+ Last Modified by: Siying Li
+ 2019-10-19
+ Description: Cloud controller for level 2
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Util;
@@ -51,8 +59,8 @@ public class CloudController2 : MonoBehaviour
         horizontalSpeed = Random.Range(horizontalSpeedRange.min, horizontalSpeedRange.max);
         verticalSpeed = Random.Range(verticalSpeedRange.min, verticalSpeedRange.max);
 
-        float randomXPosition = Random.Range(boundary.Left, boundary.Right);
-        transform.position = new Vector2(randomXPosition, Random.Range(boundary.Top, boundary.Top + 2.0f));
+        float randomYPosition = Random.Range(boundary.Top, boundary.Bottom);
+        transform.position = new Vector2(Random.Range(boundary.Top, boundary.Bottom + 8.0f), randomYPosition);
     }
 
     /// <summary>
@@ -61,7 +69,7 @@ public class CloudController2 : MonoBehaviour
     /// </summary>
     void CheckBounds()
     {
-        if (transform.position.y <= boundary.Bottom)
+        if (transform.position.x <= boundary.Left)
         {
             Reset();
         }

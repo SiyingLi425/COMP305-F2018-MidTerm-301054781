@@ -504,31 +504,6 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 2019295050}
-    - target: {fileID: 6920590654418285173, guid: 887c5bee811983a4cb06f9ea66643b36,
-        type: 3}
-      propertyPath: speed.min
-      value: -0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 6920590654418285173, guid: 887c5bee811983a4cb06f9ea66643b36,
-        type: 3}
-      propertyPath: speed.max
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 6920590654418285173, guid: 887c5bee811983a4cb06f9ea66643b36,
-        type: 3}
-      propertyPath: boundary.Right
-      value: 2.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 6920590654418285173, guid: 887c5bee811983a4cb06f9ea66643b36,
-        type: 3}
-      propertyPath: boundary.Left
-      value: -2.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 6920590654418285173, guid: 887c5bee811983a4cb06f9ea66643b36,
-        type: 3}
-      propertyPath: gameController
-      value: 
-      objectReference: {fileID: 2019295050}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 887c5bee811983a4cb06f9ea66643b36, type: 3}
 --- !u!1001 &6258031004616284574

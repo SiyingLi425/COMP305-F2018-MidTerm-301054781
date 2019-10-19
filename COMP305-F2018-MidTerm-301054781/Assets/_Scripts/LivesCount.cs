@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class LivesCount : MonoBehaviour
 {
-    public int Lives = 5;
+    public int Lives;
 }

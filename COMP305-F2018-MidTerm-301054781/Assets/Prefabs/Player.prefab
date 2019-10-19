@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1611093553563445763}
   - component: {fileID: 1611093553563445762}
-  - component: {fileID: 6920590654418285173}
+  - component: {fileID: 1611093553563445789}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6920590654418285173
+--- !u!114 &1611093553563445789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,15 +90,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1611093553563445788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cebe2c8d2d43434bb731eb53ff69210, type: 3}
+  m_Script: {fileID: 11500000, guid: 62a6a0ef93945e4458b6ed12ef94723c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed:
-    min: 0
-    max: 0
+    min: -0.04
+    max: 0.04
   boundary:
     Top: 0
-    Right: 0
+    Right: 2.86
     Bottom: 0
-    Left: 0
-  gameController: {fileID: 0}
+    Left: -2.86
+  gameController: {fileID: 6258031004218500820, guid: 0cd6714592b08874d95701663d2115fa,
+    type: 3}
