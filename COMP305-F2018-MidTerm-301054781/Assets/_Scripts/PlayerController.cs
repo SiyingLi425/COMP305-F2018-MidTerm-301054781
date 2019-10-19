@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 newPosition = transform.position;
 
-        if(Input.GetAxis("Horizontal") > 0.0f)
+        if (Input.GetAxis("Horizontal") > 0.0f)
         {
             newPosition += new Vector2(speed.max, 0.0f);
         }
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
     public void CheckBounds()
     {
         // check right boundary
-        if(transform.position.x > boundary.Right)
+        if (transform.position.x > boundary.Right)
         {
             transform.position = new Vector2(boundary.Right, transform.position.y);
         }
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        switch(other.gameObject.tag)
+        switch (other.gameObject.tag)
         {
             case "Cloud":
                 _thunderSound.Play();
@@ -76,3 +76,4 @@ public class PlayerController : MonoBehaviour
     }
 
 }
+

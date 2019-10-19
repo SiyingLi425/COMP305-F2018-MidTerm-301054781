@@ -26,7 +26,7 @@ public class OceanController : MonoBehaviour
     /// </summary>
     void Move()
     {
-        Vector2 newPosition = new Vector2(verticalSpeed,0.0f);
+        Vector2 newPosition = new Vector2(0.0f, verticalSpeed);
         Vector2 currentPosition = transform.position;
 
         currentPosition -= newPosition;
@@ -38,7 +38,7 @@ public class OceanController : MonoBehaviour
     /// </summary>
     void Reset()
     {
-        transform.position = new Vector2(resetPosition, 0.0f);
+        transform.position = new Vector2(0.0f, resetPosition);
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public class OceanController : MonoBehaviour
     /// </summary>
     void CheckBounds()
     {
-        if(transform.position.x <= resetPoint)
+        if (transform.position.y <= resetPoint)
         {
             Reset();
         }
