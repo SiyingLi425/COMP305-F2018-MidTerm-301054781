@@ -35,7 +35,9 @@ public class PlayerController2 : MonoBehaviour
         Move();
         CheckBounds();
     }
-
+    /// <summary>
+    /// moves player
+    /// </summary>
     public void Move()
     {
         Vector2 newPosition = transform.position;
@@ -52,7 +54,9 @@ public class PlayerController2 : MonoBehaviour
 
         transform.position = newPosition;
     }
-
+    /// <summary>
+    /// checks so do not go out of bounds
+    /// </summary>
     public void CheckBounds()
     {
         // check right boundary
@@ -68,6 +72,10 @@ public class PlayerController2 : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// when touching the island or cloud call methods
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D other)
     {
         switch(other.gameObject.tag)

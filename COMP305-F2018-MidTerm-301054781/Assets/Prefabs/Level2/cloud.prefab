@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ddfd566dc82c47b4581122f5c34d1ccb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -155,11 +155,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalSpeedRange:
-    min: 0.03
-    max: 0.03
+    min: 0.05
+    max: 0.08
   verticalSpeedRange:
     min: 0.01
-    max: 0.01
+    max: 0.03
   verticalSpeed: 0
   horizontalSpeed: 0
   boundary:

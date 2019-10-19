@@ -865,5 +865,10 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 2055186326}
+    - target: {fileID: 6731578474199916402, guid: 14d557ca2dbc7734fa1568baa8e97f65,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14d557ca2dbc7734fa1568baa8e97f65, type: 3}

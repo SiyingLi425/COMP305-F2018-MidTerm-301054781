@@ -78,7 +78,7 @@ public class GameController2 : MonoBehaviour
 
         }
     }
-
+    //Scores property
     public int Score
     {
         get
