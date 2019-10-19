@@ -182,7 +182,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Score >= 500 && isLevel2 == false)
+        if (Score >= 100 && isLevel2 == false)
         {
             DontDestroyOnLoad(highScore);
             DontDestroyOnLoad(playerLives);

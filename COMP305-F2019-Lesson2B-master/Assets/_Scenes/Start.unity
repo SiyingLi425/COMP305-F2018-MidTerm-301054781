@@ -635,6 +635,16 @@ PrefabInstance:
       propertyPath: isLevel2
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6258031004218500820, guid: 0cd6714592b08874d95701663d2115fa,
+        type: 3}
+      propertyPath: playerLives
+      value: 
+      objectReference: {fileID: 1454362589}
+    - target: {fileID: 6258031004218500820, guid: 0cd6714592b08874d95701663d2115fa,
+        type: 3}
+      propertyPath: _lives
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6258031004218500823, guid: 0cd6714592b08874d95701663d2115fa,
         type: 3}
       propertyPath: m_LocalPosition.x
